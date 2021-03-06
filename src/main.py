@@ -1,11 +1,11 @@
 from constants import Color, Size
 
-from retail.package import Package
-from retail.book import Book
 from bike.bike import Bike, BikeFilter
-from people.relationships import Relationships
 from people.person import Person
+from people.relationships import Relationships
 from people.research import Research
+from retail.book import Book
+from retail.package import Package
 
 
 def package_manager():
