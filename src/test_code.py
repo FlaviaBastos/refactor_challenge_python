@@ -1,8 +1,11 @@
 import pytest
 import os
+
+from .container import Container
+from .package import Package
+from .book import Book
+
 from .code import (
-    Package,
-    Book,
     Bike,
     BikeFilter,
     Color,
@@ -14,38 +17,38 @@ from .code import (
 )
 
 # Package Tests
-def test_add_piece():
+def test_package_add_item():
     p = Package()
-    p.add_piece("Entry 1")
-    p.add_piece("Entry 2")
+    p.add_item("Entry 1")
+    p.add_item("Entry 2")
 
     assert p.count == 2
-    assert len(p.pieces) == 2
-    assert f"{p.count - 1}: Entry 2" in p.pieces
+    assert len(p.items) == 2
+    assert f"{p.count - 1}: Entry 2" in p.items
 
 
-def test_remove_piece():
+def test_package_remove_item():
     p = Package()
-    p.add_piece("Entry 1")
+    p.add_item("Entry 1")
     nxt_entry = p.count
-    p.add_piece("Entry 2")
-    p.add_piece("Entry 3")
+    p.add_item("Entry 2")
+    p.add_item("Entry 3")
 
     assert p.count == 3
-    assert len(p.pieces) == 3
-    assert f"{nxt_entry}: Entry 2" in p.pieces
+    assert len(p.items) == 3
+    assert f"{nxt_entry}: Entry 2" in p.items
 
-    p.remove_piece(1)
+    p.remove_item(1)
 
     assert p.count == 3
-    assert len(p.pieces) == 2
-    assert f"{nxt_entry}: Entry 2" not in p.pieces
+    assert len(p.items) == 2
+    assert f"{nxt_entry}: Entry 2" not in p.items
 
 
 def test_package_save_to_file():
     p = Package()
-    p.add_piece("Entry 1")
-    p.add_piece("Entry 2")
+    p.add_item("Entry 1")
+    p.add_item("Entry 2")
     p.save_to_file(r"test_package.txt")
 
     assert os.path.exists("test_package.txt")
@@ -56,37 +59,37 @@ def test_package_save_to_file():
 
 
 # Book Tests
-def test_add_page():
+def test_book_add_item():
     b = Book()
-    b.add_page("Page 1")
-    b.add_page("Page 2")
+    b.add_item("Page 1")
+    b.add_item("Page 2")
 
-    assert b.page_count == 2
-    assert len(b.pages) == 2
-    assert f"Page 2" in b.pages
+    assert b.count == 2
+    assert len(b.items) == 2
+    assert f"Page 2" in b.items
 
 
-def test_remove_page():
+def test_book_remove_item():
     b = Book()
-    b.add_page("Page 1")
-    b.add_page("Page 2")
-    b.add_page("Page 3")
+    b.add_item("Page 1")
+    b.add_item("Page 2")
+    b.add_item("Page 3")
 
-    assert b.page_count == 3
-    assert len(b.pages) == 3
-    assert f"Page 2" in b.pages
+    assert b.count == 3
+    assert len(b.items) == 3
+    assert f"Page 2" in b.items
 
-    b.remove_page(1)
+    b.remove_item(1)
 
-    assert b.page_count == 3
-    assert len(b.pages) == 2
-    assert f"Page 2" not in b.pages
+    assert b.count == 3
+    assert len(b.items) == 2
+    assert f"Page 2" not in b.items
 
 
 def test_book_save_to_file():
     b = Book()
-    b.add_page("Page 1")
-    b.add_page("Page 2")
+    b.add_item("Page 1")
+    b.add_item("Page 2")
     b.save_to_file(r"test_book.txt")
 
     assert os.path.exists("test_book.txt")
