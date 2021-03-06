@@ -1,15 +1,14 @@
 import pytest
 import os
 
+from .constants import Color, Size
+
 from .container import Container
 from .package import Package
 from .book import Book
+from .bike import Bike, BikeFilter
 
 from .code import (
-    Bike,
-    BikeFilter,
-    Color,
-    Size,
     Relationship,
     Person,
     Relationships,
