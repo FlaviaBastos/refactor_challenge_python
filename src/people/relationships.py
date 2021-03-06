@@ -1,4 +1,4 @@
-from .constants import Relationship
+from constants import Relationship
 
 
 class Relationships:

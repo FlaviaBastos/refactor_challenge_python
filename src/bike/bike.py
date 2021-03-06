@@ -1,4 +1,4 @@
-from .constants import Color, Size
+from constants import Color, Size
 
 
 class Bike:

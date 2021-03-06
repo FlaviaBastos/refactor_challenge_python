@@ -1,15 +1,17 @@
 import pytest
-import os
+import os, sys
+
+sys.path.append(os.getcwd())
 
 from .constants import Color, Size, Relationship
 
-from .container import Container
-from .package import Package
-from .book import Book
-from .bike import Bike, BikeFilter
-from .relationships import Relationships
-from .person import Person
-from .research import Research
+from retail.container import Container
+from retail.package import Package
+from retail.book import Book
+from bike.bike import Bike, BikeFilter
+from people.relationships import Relationships
+from people.person import Person
+from people.research import Research
 
 
 # Package Tests
