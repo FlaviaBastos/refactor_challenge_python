@@ -8,9 +8,9 @@ from people.person import Person
 from people.research import Research
 
 
-def main():
+def package_manager():
+    """Creates and uses package functions"""
 
-    # Package
     p = Package()
 
     p.add_item("Entry 1")
@@ -20,7 +20,10 @@ def main():
     file = r"package.txt"
     p.save_to_file(file)
 
-    # Book
+
+def book_manager():
+    """Creates and uses book functions"""
+
     b = Book()
 
     b.add_item("Page 1")
@@ -30,7 +33,10 @@ def main():
     file2 = r"book.txt"
     b.save_to_file(file2)
 
-    # Bike
+
+def bike_manager():
+    """Creates bikes and uses bike filter function"""
+
     norco = Bike("Norco", Color.GREEN, Size.SMALL)
     rocky_mountain = Bike("Rocky", Color.GREEN, Size.LARGE)
     santa_cruz = Bike("SantaCruz", Color.BLUE, Size.LARGE)
@@ -42,7 +48,10 @@ def main():
     for b in bf.filter_by_color(bikes, Color.GREEN):
         print(f" - {b.name} is green")
 
-    # Relationship
+
+def people_manager():
+    """Creates people and their relationships and run a research"""
+
     boss = Person("Bob")
     employee1 = Person("Tim")
     employee2 = Person("Amy")
@@ -52,6 +61,15 @@ def main():
     relationships.add_boss_and_employee(boss, employee2)
 
     Research(relationships)
+
+
+def main():
+    """Calls different managers"""
+
+    package_manager()
+    book_manager()
+    bike_manager()
+    people_manager()
 
 
 if __name__ == "__main__":
