@@ -11,27 +11,27 @@ from people.research import Research
 def package_manager():
     """Creates and uses package functions"""
 
-    p = Package()
+    package1 = Package()
 
-    p.add_item("Entry 1")
-    p.add_item("Entry 2")
-    print(f"Package pieces:\n{p}\n")
+    package1.add_item("Entry 1")
+    package1.add_item("Entry 2")
+    print(f"Package pieces:\n{package1}\n")
 
     file = r"package.txt"
-    p.save_to_file(file)
+    package1.save_to_file(file)
 
 
 def book_manager():
     """Creates and uses book functions"""
 
-    b = Book()
+    book1 = Book()
 
-    b.add_item("Page 1")
-    b.add_item("Page 2")
-    print(f"Book pages:\n{b}\n")
+    book1.add_item("Page 1")
+    book1.add_item("Page 2")
+    print(f"Book pages:\n{book1}\n")
 
-    file2 = r"book.txt"
-    b.save_to_file(file2)
+    file = r"book.txt"
+    book1.save_to_file(file)
 
 
 def bike_manager():
@@ -43,10 +43,10 @@ def bike_manager():
 
     bikes = [norco, rocky_mountain, santa_cruz]
 
-    bf = BikeFilter()
+    bike_filter1 = BikeFilter()
     print("Green bikes:")
-    for b in bf.filter_by_color(bikes, Color.GREEN):
-        print(f" - {b.name} is green")
+    for bike in bike_filter1.filter_by_color(bikes, Color.GREEN):
+        print(f" - {bike.name} is green")
 
 
 def people_manager():
