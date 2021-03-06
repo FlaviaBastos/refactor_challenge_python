@@ -11,3 +11,9 @@ class Size(Enum):
     SMALL = 1
     MEDIUM = 2
     LARGE = 3
+
+
+class Relationship(Enum):
+    BOSS = 0
+    EMPLOYEE = 1
+    COWORKER = 2

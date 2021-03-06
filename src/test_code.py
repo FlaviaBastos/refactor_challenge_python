@@ -1,19 +1,16 @@
 import pytest
 import os
 
-from .constants import Color, Size
+from .constants import Color, Size, Relationship
 
 from .container import Container
 from .package import Package
 from .book import Book
 from .bike import Bike, BikeFilter
+from .relationships import Relationships
+from .person import Person
+from .research import Research
 
-from .code import (
-    Relationship,
-    Person,
-    Relationships,
-    Research,
-)
 
 # Package Tests
 def test_package_add_item():
