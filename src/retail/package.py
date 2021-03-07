@@ -12,5 +12,6 @@ class Package(Container):
         Args:
             text (str): item description.
         """
+
         self.items.append(f"{self.count}: {text}")
         self.count += 1

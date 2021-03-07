@@ -8,7 +8,6 @@ class Bike:
         name (str): name of the bike.
         color (enum): color of the bike.
         size (enum): size of the bike.
-
     """
 
     def __init__(self, name, color, size):
@@ -18,13 +17,13 @@ class Bike:
 
 
 class BikeFilter:
-    """Creates a bike filter"""
+    """Creates a bike filter."""
 
     def filter_by_color(self, bikes, color):
         """Filters bikes by color.
 
         Args:
-            bikes (list[str]): list of bikes.
+            bikes (list[Bike objects]): list of bikes.
             color (enum): color of the bike.
 
         Yields:
@@ -39,11 +38,11 @@ class BikeFilter:
         """Filters bikes by size.
 
         Args:
-            bikes (list[str]): list of bikes.
+            bikes (list[Bike objects]): list of bikes.
             size (enum): size of the bike.
 
         Yields:
-            bike object that matches filter option
+            bike object that matches filter option.
         """
 
         for bike in bikes:
@@ -54,7 +53,7 @@ class BikeFilter:
         """Filters bikes by color.
 
         Args:
-            bikes (list[str]): list of bikes.
+            bikes (list[Bike objects]): list of bikes.
             size (enum): size of the bike.
             color (enum): color of the bike.
 

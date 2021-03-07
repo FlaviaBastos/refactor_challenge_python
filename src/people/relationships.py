@@ -12,7 +12,7 @@ class Relationships:
         Args:
             boss (Person obj): boss object instance.
             employee (Person obj): employee object instance.
-
         """
+
         self.relations.append((boss, Relationship.BOSS, employee))
         self.relations.append((employee, Relationship.EMPLOYEE, boss))

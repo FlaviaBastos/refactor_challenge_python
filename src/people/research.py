@@ -2,7 +2,7 @@ from constants import Relationship
 
 
 class Research:
-    """Creates a research object.
+    """Instatiate class and run a research.
 
     Args:
         relationships (list[Relationship objects]): list of relationships to be searched.

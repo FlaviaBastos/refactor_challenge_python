@@ -20,3 +20,6 @@ pip3 install -r requirements.txt
 ```
 pytest
 ```
+
+### Considerations
+There are a few functions that have side-effects instead of return values but my main goal was to preserve the functionality as much as possible and opted to not change these functions.

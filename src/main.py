@@ -9,7 +9,7 @@ from retail.package import Package
 
 
 def package_manager():
-    """Creates and uses package functions"""
+    """Creates and uses package functions."""
 
     package1 = Package()
 
@@ -22,7 +22,7 @@ def package_manager():
 
 
 def book_manager():
-    """Creates and uses book functions"""
+    """Creates and uses book functions."""
 
     book1 = Book()
 
@@ -35,7 +35,7 @@ def book_manager():
 
 
 def bike_manager():
-    """Creates bikes and uses bike filter function"""
+    """Creates bikes and uses bike filter function."""
 
     norco = Bike("Norco", Color.GREEN, Size.SMALL)
     rocky_mountain = Bike("Rocky", Color.GREEN, Size.LARGE)
@@ -50,7 +50,7 @@ def bike_manager():
 
 
 def people_manager():
-    """Creates people and their relationships and run a research"""
+    """Creates people and their relationships and run a research."""
 
     boss = Person("Bob")
     employee1 = Person("Tim")
@@ -64,7 +64,7 @@ def people_manager():
 
 
 def main():
-    """Calls different managers"""
+    """Calls different managers."""
 
     package_manager()
     book_manager()
