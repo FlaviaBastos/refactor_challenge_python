@@ -33,5 +33,8 @@ class Container:
         Args:
             filename (str): name of the file.
         """
-        with open(filename, "w") as file:
-            file.write(str(self))
+        try:
+            with open(filename, "w") as file:
+                file.write(str(self))
+        except IOError:
+            print(f"Could not write file {filename}")
